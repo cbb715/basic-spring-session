@@ -5,18 +5,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Getter
 @Entity
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    public Member(String name) { this.name = name; }
-
-    public void update(String name) { this.name = name; }
+    public Member(String name){
+        this.name = name;
+    }
 }

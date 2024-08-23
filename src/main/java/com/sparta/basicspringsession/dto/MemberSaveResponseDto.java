@@ -6,9 +6,9 @@ import lombok.Getter;
 public class MemberSaveResponseDto {
 
     private final Long id;
-    private final Long name;
+    private final  String name;
 
-    public MemberSaveResponseDto(Long id, Long name) {
+    public MemberSaveResponseDto(Long id, String name) {
         this.id = id;
         this.name = name;
     }
